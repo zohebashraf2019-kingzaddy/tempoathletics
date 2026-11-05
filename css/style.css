@@ -347,3 +347,18 @@ details summary { font-weight: 800; cursor: pointer; }
 .stage img[data-stage] { height: min(78vh, 900px); max-height: none; object-fit: contain; object-position: center; background: var(--ink); }
 .gallery .shot.photo img { aspect-ratio: 9 / 26; object-fit: cover; object-position: top; }
 @media (max-width: 820px) { .stage img[data-stage] { height: 70vh; } }
+
+/* Story layout: headline on its own row so it can never run into the copy */
+.display { overflow-wrap: break-word; }
+.story-title { font-size: clamp(36px, 6.4vw, 104px); max-width: 14ch; margin-bottom: clamp(40px, 5vw, 72px); }
+.story-grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); align-items: center; }
+.runner-col { display: flex; justify-content: center; }
+.story-grid .runner { width: 100%; max-width: 360px; height: auto; }
+.story-body p { max-width: 36em; }
+.story-body p:last-child { margin-bottom: 0; }
+.beliefs h3 { font-size: clamp(18px, 1.8vw, 24px); }
+@media (max-width: 820px) {
+  .story-grid { grid-template-columns: 1fr; gap: 32px; }
+  .runner-col { justify-content: flex-start; }
+  .story-grid .runner { max-width: 220px; }
+}
