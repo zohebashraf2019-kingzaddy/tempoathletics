@@ -1,6 +1,19 @@
-/* Home page: Drop grid, fit room lineup + builder, signup */
+/* Home page: Drop grid, fit room photos + size guide, signup */
 (function () {
-  const { fitSVG, fitVerdict, SIZES, TONES, fmtHeight } = window.TempoFit;
+  const SIZES = ["XS", "S", "M", "L", "XL", "XXL"];
+  const PHOTOS = {
+    m: { front: "assets/lookbook/mens-front.jpg", back: "assets/lookbook/mens-back.jpg" },
+    f: { front: "assets/lookbook/womens-front.jpg", back: "assets/lookbook/womens-back.jpg" },
+  };
+  function fitVerdict(d) {
+    return [
+      { t: "Too tight", p: "Two sizes under your usual. Size up for the cut as designed." },
+      { t: "Fitted", p: "Closer through the chest and hip, sleeves end at the wrist bone. Good if you like a compression feel." },
+      { t: "True to size", p: "Relaxed through the body with room to swing your arms, the way Drop 01 was cut." },
+      { t: "Oversized", p: "Boxier body and longer sleeves that stack at the wrist. Great for a streetwear look." },
+      { t: "Very oversized", p: "Sleeves run past the wrist and the shorts sit loose. Size down for running." },
+    ][Math.max(-2, Math.min(2, d)) + 2];
+  }
 
   // ---------- Drop grid ----------
   document.addEventListener("catalog:ready", (e) => {
@@ -28,25 +41,10 @@
       </div>`).join("");
   });
 
-  // ---------- Fit room lineup ----------
-  const LINEUP = [
-    { name: "Marcus", sex: "m", body: 2, size: 2, height: 71, tone: 3 },
-    { name: "Jay", sex: "m", body: 1, size: 2, height: 68, tone: 1 },
-    { name: "Dre", sex: "m", body: 4, size: 4, height: 74, tone: 5 },
-    { name: "Ava", sex: "f", body: 0, size: 0, height: 62, tone: 0 },
-    { name: "Sofia", sex: "f", body: 2, size: 2, height: 66, tone: 2 },
-    { name: "Nia", sex: "f", body: 3, size: 3, height: 69, tone: 4 },
-  ];
-  document.querySelector("[data-lineup]").innerHTML = LINEUP.map((m) => `
-    <figure>
-      ${fitSVG({ ...m, label: `${m.name}, ${fmtHeight(m.height)}, wearing size ${SIZES[m.size]}` })}
-      <figcaption><b>${m.name}</b>${fmtHeight(m.height)}, ${SIZES[m.body]} build<br>wears ${SIZES[m.size]}</figcaption>
-    </figure>`).join("");
-
   // ---------- Fit room builder ----------
   const params = new URLSearchParams(location.search);
   const startSize = SIZES.indexOf((params.get("size") || "M").toUpperCase());
-  const st = { sex: "m", body: 2, size: startSize >= 0 ? startSize : 2, tone: 2, height: 70, view: "front" };
+  const st = { sex: "m", body: 2, size: startSize >= 0 ? startSize : 2, view: "front" };
 
   const segFill = (key, labels) => {
     document.querySelector(`[data-ctl="${key}"]`).innerHTML = labels
@@ -54,20 +52,18 @@
   };
   segFill("body", SIZES);
   segFill("size", SIZES);
-  document.querySelector('[data-ctl="tone"]').innerHTML = TONES
-    .map((t, i) => `<button type="button" data-v="${i}" style="background:${t}" aria-label="Skin tone ${i + 1}" aria-pressed="false"></button>`).join("");
-
   function draw() {
-    document.querySelector("[data-stage]").innerHTML = fitSVG({ ...st, label: `Fit model wearing size ${SIZES[st.size]}` });
+    const img = document.querySelector("[data-stage]");
+    img.src = PHOTOS[st.sex][st.view];
+    img.alt = `${st.sex === "m" ? "Men's" : "Women's"} model wearing Drop 01, ${st.view} view`;
     document.querySelectorAll("[data-ctl]").forEach((group) => {
       const key = group.dataset.ctl;
       group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === String(st[key]))));
     });
     document.querySelectorAll("[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === st.view)));
-    document.querySelector("[data-height-out]").textContent = fmtHeight(st.height);
     const v = fitVerdict(st.size - st.body);
     document.querySelector("[data-readout]").innerHTML =
-      `<strong>${v.t}</strong><p>Size ${SIZES[st.size]} on a ${SIZES[st.body]} build. ${v.p}</p>`;
+      `<strong>${v.t}</strong><p>Ordering ${SIZES[st.size]} when you usually wear ${SIZES[st.body]}. ${v.p}</p>`;
   }
 
   document.querySelectorAll("[data-ctl]").forEach((group) => {
@@ -79,7 +75,6 @@
       draw();
     });
   });
-  document.querySelector("[data-ctl-height]").addEventListener("input", (e) => { st.height = parseInt(e.target.value, 10); draw(); });
   document.querySelectorAll("[data-view]").forEach((b) => b.addEventListener("click", () => { st.view = b.dataset.view; draw(); }));
   draw();
 

@@ -53,14 +53,16 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="fit-title" class="display">Fit room</h2>
-        <p class="lede">See Drop 01 on different builds and heights before you pick a size. Full photoshoots are on the way.</p>
+        <p class="lede">Drop 01 on our models, front and back. The Pace Mesh Long Sleeve and Catch Up Split Short, worn together.</p>
       </div>
 
-      <div class="lineup" data-lineup></div>
+      <figure class="lookbook">
+        <img src="assets/lookbook/drop-01-lookbook.jpg" alt="Men's and women's models wearing the black Pace Mesh Long Sleeve and white Catch Up Split Short, shown from the front and back" width="1254" height="1254" loading="lazy">
+      </figure>
 
       <div class="builder">
         <div class="stage">
-          <div data-stage></div>
+          <img data-stage alt="" width="410" height="1194">
           <div class="stage-toggle seg" role="group" aria-label="View">
             <button type="button" data-view="front" aria-pressed="true">Front</button>
             <button type="button" data-view="back" aria-pressed="false">Back</button>
@@ -75,23 +77,19 @@
             </div>
           </fieldset>
           <fieldset class="control">
-            <legend>Your build</legend>
+            <legend>Your usual size</legend>
             <div class="seg" data-ctl="body"></div>
           </fieldset>
-          <div class="control">
-            <label for="height">Height: <span data-height-out>5'10"</span></label>
-            <input id="height" type="range" min="58" max="78" step="1" value="70" data-ctl-height>
-          </div>
           <fieldset class="control">
-            <legend>Skin tone</legend>
-            <div class="tones" data-ctl="tone"></div>
-          </fieldset>
-          <fieldset class="control">
-            <legend>Size you'd wear</legend>
+            <legend>Size you'd order</legend>
             <div class="seg" data-ctl="size"></div>
           </fieldset>
           <div class="fit-readout" aria-live="polite" data-readout></div>
-          <p class="fit-note">Illustrated fit preview based on the Drop 01 size charts. Check the size chart on each product for exact measurements.</p>
+          <p class="fit-note">Fit guidance is based on the Drop 01 size charts. Check the size chart on each product for exact measurements.</p>
+          <div class="hero-actions" style="justify-content:flex-start">
+            <a class="btn btn-solid-dark" href="product.html?id=pace-long-sleeve">Shop the long sleeve</a>
+            <a class="btn" href="product.html?id=catch-up-short">Shop the short</a>
+          </div>
         </div>
       </div>
     </div>
@@ -150,7 +148,6 @@
 </main>
 
 <script src="js/app.js"></script>
-<script src="js/fitroom.js"></script>
 <script src="js/home.js"></script>
 </body>
 </html>

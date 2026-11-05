@@ -27,7 +27,7 @@ Shipping rules (`freeShippingThreshold`, `flatShipping`) are at the top of the s
 Until the key is set, checkout runs in test mode: the order goes through to the confirmation page and no card is charged.
 
 ## Fit room
-`js/fitroom.js` draws illustrated men's and women's fit models (XS–XXL builds, 4'10"–6'6", six skin tones, front/back) wearing Drop 01. When photoshoot images are ready, they can replace or sit alongside the lineup in `index.html`.
+Model photos live in `assets/lookbook/` (full campaign image plus men's/women's front and back crops). Swap in new photoshoot images with the same file names, or add `modelImages` to a product in `data/products.json` to show on-model shots on its product page.
 
 ## Newsletter
 The Drop 02 signup currently saves to the visitor's browser only. Connect it to Mailchimp, Klaviyo or similar before launch.

@@ -12,8 +12,18 @@
       "color": "Black",
       "category": "Top",
       "garment": "top",
-      "images": ["assets/products/long-sleeve-front.jpg", "assets/products/long-sleeve-back.jpg"],
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "images": [
+        "assets/products/long-sleeve-front.jpg",
+        "assets/products/long-sleeve-back.jpg"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "summary": "Cropped raglan long sleeve with breathable mesh side panels and the Tempo oval across the chest.",
       "details": [
         "Boxy, cropped body that sits at the waist",
@@ -24,16 +34,55 @@
       ],
       "fit": "Relaxed and cropped. Take your usual size for the intended fit, or size down for a closer cut.",
       "sizeChart": {
-        "headers": ["Size", "Chest width (in)", "Body length (in)", "Sleeve (in)"],
+        "headers": [
+          "Size",
+          "Chest width (in)",
+          "Body length (in)",
+          "Sleeve (in)"
+        ],
         "rows": [
-          ["XS", "19", "19.5", "31"],
-          ["S", "20", "20", "32"],
-          ["M", "21.5", "20.5", "33"],
-          ["L", "23", "21", "34"],
-          ["XL", "24.5", "21.5", "35"],
-          ["XXL", "26", "22", "35.5"]
+          [
+            "XS",
+            "19",
+            "19.5",
+            "31"
+          ],
+          [
+            "S",
+            "20",
+            "20",
+            "32"
+          ],
+          [
+            "M",
+            "21.5",
+            "20.5",
+            "33"
+          ],
+          [
+            "L",
+            "23",
+            "21",
+            "34"
+          ],
+          [
+            "XL",
+            "24.5",
+            "21.5",
+            "35"
+          ],
+          [
+            "XXL",
+            "26",
+            "22",
+            "35.5"
+          ]
         ]
-      }
+      },
+      "modelImages": [
+        "assets/lookbook/mens-front.jpg",
+        "assets/lookbook/womens-back.jpg"
+      ]
     },
     {
       "id": "catch-up-short",
@@ -44,8 +93,18 @@
       "color": "White",
       "category": "Bottom",
       "garment": "bottom",
-      "images": ["assets/products/shorts-front.jpg", "assets/products/shorts-back.jpg"],
-      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "images": [
+        "assets/products/shorts-front.jpg",
+        "assets/products/shorts-back.jpg"
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "summary": "Lightweight split-hem running short with mesh panels and a zip pocket that says Catch Up.",
       "details": [
         "5\" inseam with split side hem",
@@ -56,16 +115,55 @@
       ],
       "fit": "Regular fit through the hip with an easy, open leg. True to size.",
       "sizeChart": {
-        "headers": ["Size", "Waist (in)", "Hip (in)", "Inseam (in)"],
+        "headers": [
+          "Size",
+          "Waist (in)",
+          "Hip (in)",
+          "Inseam (in)"
+        ],
         "rows": [
-          ["XS", "26–28", "34–36", "5"],
-          ["S", "28–30", "36–38", "5"],
-          ["M", "30–32", "38–40", "5"],
-          ["L", "32–34", "40–42", "5"],
-          ["XL", "34–37", "42–45", "5"],
-          ["XXL", "37–40", "45–48", "5"]
+          [
+            "XS",
+            "26–28",
+            "34–36",
+            "5"
+          ],
+          [
+            "S",
+            "28–30",
+            "36–38",
+            "5"
+          ],
+          [
+            "M",
+            "30–32",
+            "38–40",
+            "5"
+          ],
+          [
+            "L",
+            "32–34",
+            "40–42",
+            "5"
+          ],
+          [
+            "XL",
+            "34–37",
+            "42–45",
+            "5"
+          ],
+          [
+            "XXL",
+            "37–40",
+            "45–48",
+            "5"
+          ]
         ]
-      }
+      },
+      "modelImages": [
+        "assets/lookbook/womens-front.jpg",
+        "assets/lookbook/mens-back.jpg"
+      ]
     },
     {
       "id": "oval-tee",

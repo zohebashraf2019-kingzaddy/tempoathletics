@@ -32,8 +32,9 @@ document.addEventListener("catalog:ready", () => {
   let size = null;
   root.innerHTML = `
     <div class="pdp-grid">
-      <div class="gallery">
+      <div class="gallery${p.modelImages ? " with-photos" : ""}">
         ${p.images.map((src, i) => `<div class="shot"><img src="${src}" alt="${p.name}, ${i ? "back" : "front"}"></div>`).join("")}
+        ${(p.modelImages || []).map((src) => `<div class="shot photo"><img src="${src}" alt="${p.name} on model" loading="lazy"></div>`).join("")}
       </div>
       <div class="buy">
         <p class="muted" style="margin:0 0 8px">Drop 0${p.drop}, ${p.category}</p>
@@ -46,7 +47,7 @@ document.addEventListener("catalog:ready", () => {
         </div>
         <p class="err" data-size-err></p>
         <button class="btn btn-solid-dark btn-block" type="button" data-add>Add to cart, ${Tempo.money(p.price)}</button>
-        <a class="btn btn-block" href="index.html?size=M#fit-room" data-fit-link style="margin-top:10px">See it on a fit model</a>
+        <a class="btn btn-block" href="index.html?size=M#fit-room" data-fit-link style="margin-top:10px">See it on our models</a>
         <details open>
           <summary>Fit</summary>
           <p>${p.fit}</p>
