@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order confirmed | TempoAthletics</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/logos/tempo-runner-black.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="confirm">
+  <div class="wrap">
+    <img src="assets/logos/tempo-runner-black.png" alt="The Tempo runner">
+    <h1 class="display" style="font-size:clamp(40px,7vw,88px)">You're in the race</h1>
+    <p class="lede" data-msg>Your order is confirmed. A receipt is on its way to your inbox.</p>
+    <a class="btn btn-solid-dark" href="index.html">Back to Tempo</a>
+  </div>
+</main>
+<script src="js/app.js"></script>
+<script>
+document.addEventListener("catalog:ready", () => {
+  const params = new URLSearchParams(location.search);
+  if (params.get("demo")) {
+    document.querySelector("[data-msg]").textContent =
+      "Test order placed. Payments aren't connected yet, so no card was charged.";
+  }
+  Tempo.clearCart();
+});
+</script>
+</body>
+</html>

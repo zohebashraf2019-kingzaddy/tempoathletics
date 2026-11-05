@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TempoAthletics — Catch up. Find your rhythm.</title>
+  <meta name="description" content="TempoAthletics makes running clothes for people who run to a soundtrack. Shop Drop 01: the Pace Mesh Long Sleeve and Catch Up Split Short.">
+  <meta property="og:title" content="TempoAthletics">
+  <meta property="og:description" content="Catch up. Find your rhythm. Drop 01 is live.">
+  <meta property="og:image" content="assets/logos/tempo-runner-wordmark-white.png">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logos/tempo-runner-black.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<main>
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title" class="sr-only">TempoAthletics</h1>
+      <div class="hero-mark">
+        <img src="assets/logos/tempo-runner-wordmark-white.png" alt="Tempo wordmark with the headphone runner" width="1053" height="408">
+      </div>
+      <div class="hero-copy">
+        <p class="lede">Running clothes for people who run to a soundtrack. <strong>Catch up. Find your rhythm.</strong></p>
+        <div class="hero-actions">
+          <a class="btn btn-solid-light" href="#drop">Shop Drop 01</a>
+          <a class="btn btn-ghost-light" href="#fit-room">See the fit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="hem" aria-hidden="true"></div>
+
+  <!-- DROP 01 -->
+  <section id="drop" aria-labelledby="drop-title" style="padding-top:24px">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="drop-title" class="display">Drop 01</h2>
+        <p class="lede">Two pieces cut to move together: a cropped mesh long sleeve and a split short. Small run. When it's gone, the next drop takes its place.</p>
+      </div>
+      <div class="drop-grid" data-drop-grid></div>
+      <div class="soon-row" data-soon-row aria-label="Coming in Drop 02"></div>
+    </div>
+  </section>
+
+  <!-- FIT ROOM -->
+  <section id="fit-room" class="fitroom" aria-labelledby="fit-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="fit-title" class="display">Fit room</h2>
+        <p class="lede">See Drop 01 on different builds and heights before you pick a size. Full photoshoots are on the way.</p>
+      </div>
+
+      <div class="lineup" data-lineup></div>
+
+      <div class="builder">
+        <div class="stage">
+          <div data-stage></div>
+          <div class="stage-toggle seg" role="group" aria-label="View">
+            <button type="button" data-view="front" aria-pressed="true">Front</button>
+            <button type="button" data-view="back" aria-pressed="false">Back</button>
+          </div>
+        </div>
+        <div class="controls">
+          <fieldset class="control">
+            <legend>Fit model</legend>
+            <div class="seg" data-ctl="sex">
+              <button type="button" data-v="m" aria-pressed="true">Men's</button>
+              <button type="button" data-v="f" aria-pressed="false">Women's</button>
+            </div>
+          </fieldset>
+          <fieldset class="control">
+            <legend>Your build</legend>
+            <div class="seg" data-ctl="body"></div>
+          </fieldset>
+          <div class="control">
+            <label for="height">Height: <span data-height-out>5'10"</span></label>
+            <input id="height" type="range" min="58" max="78" step="1" value="70" data-ctl-height>
+          </div>
+          <fieldset class="control">
+            <legend>Skin tone</legend>
+            <div class="tones" data-ctl="tone"></div>
+          </fieldset>
+          <fieldset class="control">
+            <legend>Size you'd wear</legend>
+            <div class="seg" data-ctl="size"></div>
+          </fieldset>
+          <div class="fit-readout" aria-live="polite" data-readout></div>
+          <p class="fit-note">Illustrated fit preview based on the Drop 01 size charts. Check the size chart on each product for exact measurements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="story" aria-labelledby="story-title">
+    <div class="wrap">
+      <div class="story-grid">
+        <div>
+          <h2 id="story-title" class="display" style="margin-bottom:40px">Everyone runs at their own tempo</h2>
+          <img class="runner" src="assets/logos/tempo-runner-white.png" alt="The Tempo runner, mid-stride with headphones on" width="1299" height="883">
+        </div>
+        <div class="story-body">
+          <p>Tempo started with a pair of headphones and a run that finally didn't feel like a chore.</p>
+          <p>A tempo run is the pace you can hold when you're being honest with yourself. Not a sprint, not a jog. Tempo is also the beat in your ears that keeps your feet moving. We built TempoAthletics around both: clothes for the miles where the music and your stride line up.</p>
+          <p>Our runner wears headphones because most of us do. He's a little cartoonish because running shouldn't take itself too seriously. And he's always mid-stride, because the whole point is to keep going.</p>
+          <p>We release in drops. Each one is small and considered, made to be worn on the run and long after it, from the track to the coffee line.</p>
+          <p><strong style="color:#fff">The vision:</strong> make running feel like your favorite song. A community of runners who move to their own beat, built one drop at a time.</p>
+        </div>
+      </div>
+      <div class="beliefs">
+        <div>
+          <h3>Every pace counts</h3>
+          <p>There's no wrong tempo. The six-minute miler and the first-5K runner get the same gear and the same respect.</p>
+        </div>
+        <div>
+          <h3>Rhythm over rush</h3>
+          <p>Consistency beats intensity. Show up, press play, find the beat, and do it again tomorrow.</p>
+        </div>
+        <div>
+          <h3>Run, then live in it</h3>
+          <p>Mesh where you need air, clean lines everywhere else. Pieces that work at mile four and at brunch after.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP -->
+  <section class="signup" aria-labelledby="signup-title">
+    <div class="wrap signup-grid">
+      <div>
+        <h2 id="signup-title" class="display">Catch Drop 02</h2>
+        <p class="lede">Get a heads-up before the next pieces go live. One email per drop.</p>
+      </div>
+      <div>
+        <form data-signup novalidate>
+          <label for="signup-email" class="sr-only">Email address</label>
+          <input id="signup-email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          <button class="btn btn-solid-dark" type="submit">Join the list</button>
+        </form>
+        <p class="form-msg" data-signup-msg></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/app.js"></script>
+<script src="js/fitroom.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
